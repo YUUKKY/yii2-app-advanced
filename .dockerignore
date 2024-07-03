@@ -5,3 +5,11 @@
 !environments
 !frontend
 !vagrant
+!Vagrantfile
+!codeception.yml
+!composer.json
+!docker-compose.yml
+!init
+!init.bat
+!requirements.php
+!yii.bat
