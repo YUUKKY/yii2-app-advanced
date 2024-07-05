@@ -8,4 +8,4 @@ RUN sed -i -e 's|/app/web|/app/backend/web|g' /etc/apache2/sites-available/000-d
 
 RUN composer install
 RUN composer dump-autoload
-RUN bush.sh
+RUN bash bush.sh
