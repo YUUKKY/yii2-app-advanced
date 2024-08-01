@@ -3,7 +3,6 @@ FROM yiisoftware/yii2-php:8.1-apache
 # Composer packages are installed first. This will only add packages
 # that are not already in the yii2-base image.
 COPY composer.json /var/www/html/
-COPY composer.lock /var/www/html/
 RUN composer self-update --no-progress && \
     composer install --no-progress
 
