@@ -19,26 +19,7 @@ $envNames = array_keys($envs);
 
 echo "Yii Application Initialization Tool v1.0\n\n";
 
-$envName = null;
-if (empty($params['env']) || $params['env'] === true) {
-    echo "Which environment do you want the application to be initialized in?\n\n";
-    foreach ($envNames as $i => $name) {
-        echo "  [$i] $name\n";
-    }
-    echo "\n  Your choice [0-" . (count($envs) - 1) . ', or "q" to quit] ';
-    $answer = trim(fgets(STDIN));
-
-    if (!ctype_digit($answer) || !in_array($answer, range(0, count($envs) - 1))) {
-        echo "\n  Quit initialization.\n";
-        exit(0);
-    }
-
-    if (isset($envNames[$answer])) {
-        $envName = $envNames[$answer];
-    }
-} else {
-    $envName = $params['env'];
-}
+$envName = 1;
 
 if (!in_array($envName, $envNames, true)) {
     $envsList = implode(', ', $envNames);
@@ -47,15 +28,6 @@ if (!in_array($envName, $envNames, true)) {
 }
 
 $env = $envs[$envName];
-
-if (empty($params['env'])) {
-    echo "\n  Initialize the application under '{$envNames[$answer]}' environment? [yes|no] ";
-    $answer = trim(fgets(STDIN));
-    if (strncasecmp($answer, 'y', 1)) {
-        echo "\n  Quit initialization.\n";
-        exit(0);
-    }
-}
 
 $rootPath = "$root/environments/{$env['path']}";
 if (!is_dir($rootPath)) {
