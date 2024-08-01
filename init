@@ -19,7 +19,7 @@ $envNames = array_keys($envs);
 
 echo "Yii Application Initialization Tool v1.0\n\n";
 
-$envName = 1;
+$envName = "Development";
 
 if (!in_array($envName, $envNames, true)) {
     $envsList = implode(', ', $envNames);
