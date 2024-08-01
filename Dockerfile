@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM yiisoftware/yii2-php:8.1-apache
  
 WORKDIR /var/www
  
