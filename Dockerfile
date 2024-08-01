@@ -8,4 +8,4 @@ RUN sed -i -e 's|/app/web|/app/backend/web|g' /etc/apache2/sites-available/000-d
 
 RUN composer install
 RUN composer dump-autoload
-RUN php init
+CMD ["php", "init"]
