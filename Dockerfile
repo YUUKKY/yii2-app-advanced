@@ -24,5 +24,3 @@ RUN pip3 install -i https://mirrors.huaweicloud.com/repository/pypi/simple Reque
 RUN pip3 install -i https://mirrors.huaweicloud.com/repository/pypi/simple chinese_calendar
 RUN pip3 install -i https://mirrors.huaweicloud.com/repository/pypi/simple xgboost==1.4.2
 RUN pip3 install -i https://mirrors.aliyun.com/pypi/simple  PySCIPOpt==4.3.0
-
-ENTRYPOINT ["python","app.py"]
