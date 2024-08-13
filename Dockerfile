@@ -6,6 +6,7 @@ ADD . /trade-algo-shandong-intraday-price-forecast/
 
 WORKDIR /trade-algo-shandong-intraday-price-forecast
 
+RUN pip3 install pipreqs
 RUN pipreqs --debug ./
 RUN pip3 install -i https://mirrors.huaweicloud.com/repository/pypi/simple --upgrade pip
 RUN pip3 install -i https://mirrors.huaweicloud.com/repository/pypi/simple loguru==0.5.3
