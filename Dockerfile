@@ -1,4 +1,4 @@
-From yiisoftware/yii2-php:8.1-apache
+From swr.cn-north-4.myhuaweicloud.com/group-cae/python:3.8
 
 WORKDIR /app
 COPY . /app/
